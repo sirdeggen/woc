@@ -39,7 +39,7 @@ export default class WocClient {
     this.api = 'https://api.whatsonchain.com/v1/bsv/main'
   }
 
-  private requestQueue: Array<{
+  private readonly requestQueue: Array<{
     resolve: (value: any) => void
     reject: (reason?: any) => void
     request: { url: string; options: RequestInit }
